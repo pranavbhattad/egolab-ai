@@ -29,10 +29,32 @@ const Contact: React.FC = () => {
   //   }
   // };
 
-  const handleSubmit = () => {
-  setSubmitted(true);
-  setTimeout(() => setSubmitted(false), 5000);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    });
+
+    setSubmitted(true);
+    form.reset();
+    setTimeout(() => setSubmitted(false), 5000);
+  } catch (err) {
+    console.error(err);
+    alert('Submission failed. Please try again.');
+  }
 };
+
+//   const handleSubmit = () => {
+//   setSubmitted(true);
+//   setTimeout(() => setSubmitted(false), 5000);
+// };
 
 
   return (
