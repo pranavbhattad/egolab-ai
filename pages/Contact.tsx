@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
             method="POST"
             className="bg-white/[0.03] border border-white/10 p-8 md:p-10 rounded-3xl backdrop-blur-md"
             netlify
-            actions="/"
+            action="/"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
