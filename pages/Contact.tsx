@@ -38,16 +38,16 @@ const Contact: React.FC = () => {
   try {
     await fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
       body: new URLSearchParams(formData as any).toString(),
     });
 
     setSubmitted(true);
     form.reset();
-    setTimeout(() => setSubmitted(false), 5000);
   } catch (err) {
     console.error(err);
-    alert('Submission failed. Please try again.');
   }
 };
 
@@ -89,12 +89,10 @@ const Contact: React.FC = () => {
 
         <div className="lg:col-span-2">
           <form 
-            key={formType}
             onSubmit={handleSubmit} 
             name="egolab-contact"
             method="POST"
             className="bg-white/[0.03] border border-white/10 p-8 md:p-10 rounded-3xl backdrop-blur-md"
-            netlify
             action="/"
             data-netlify="true"
             netlify-honeypot="bot-field"

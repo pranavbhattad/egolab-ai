@@ -40,9 +40,22 @@
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="noise">
-    <form name="egolab-contact" data-netlify="true" hidden>
-    <input type="hidden" name="form-name" value="egolab-contact" />
-    </form>
+    <form
+  name="egolab-contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  hidden
+>
+  <input type="hidden" name="form-name" value="egolab-contact" />
+  <input type="text" name="Full_Name" />
+  <input type="email" name="Email" />
+  <input type="text" name="Organization" />
+  <input type="text" name="Focus_Area" />
+  <textarea name="Message_Details"></textarea>
+  <input type="text" name="Inquiry_Type" />
+</form>
+
 
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
