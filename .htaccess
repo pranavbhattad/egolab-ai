@@ -1,0 +1,21 @@
+
+# 1. Map .tsx and .ts to JavaScript MIME type
+AddType application/javascript .ts
+AddType application/javascript .tsx
+
+# 2. Force the Content-Type header to bypass strict server configurations
+<FilesMatch "\.(ts|tsx)$">
+    Header set Content-Type "application/javascript"
+</FilesMatch>
+
+# 3. Security and CORS for ESM modules
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# 4. Clear Cache for testing (You can remove this once the site is live)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 0 seconds"
+</IfModule>

@@ -1,0 +1,7 @@
+{
+  "name": "Egolab.ai - India's Egocentric Data Aggregator",
+  "description": "Premium egocentric manufacturing datasets from Indian factories for computer vision, robotics, and AR/VR workflows. Scale first-person AI training with Bharat-centric data.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
