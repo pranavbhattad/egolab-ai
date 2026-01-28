@@ -5,29 +5,35 @@ const Contact: React.FC = () => {
   const [formType, setFormType] = useState<'buyer' | 'factory'>('buyer');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   const form = e.currentTarget;
+  //   const formData = new FormData(form);
 
-    try {
-      // Send to Netlify form endpoint
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      });
+  //   try {
+  //     // Send to Netlify form endpoint
+  //     const response = await fetch('/', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //       body: new URLSearchParams(formData as any).toString()
+  //     });
       
-      if (response.ok) {
-        setSubmitted(true);
-        form.reset();
-        setTimeout(() => setSubmitted(false), 5000);
-      }
-    } catch (error) {
-      console.error("Form submission failed", error);
-      alert("Submission failed. Please try again.");
-    }
-  };
+  //     if (response.ok) {
+  //       setSubmitted(true);
+  //       form.reset();
+  //       setTimeout(() => setSubmitted(false), 5000);
+  //     }
+  //   } catch (error) {
+  //     console.error("Form submission failed", error);
+  //     alert("Submission failed. Please try again.");
+  //   }
+  // };
+
+  const handleSubmit = () => {
+  setSubmitted(true);
+  setTimeout(() => setSubmitted(false), 5000);
+};
+
 
   return (
     <div className="max-w-7xl mx-auto px-6">
@@ -67,6 +73,7 @@ const Contact: React.FC = () => {
             method="POST"
             className="bg-white/[0.03] border border-white/10 p-8 md:p-10 rounded-3xl backdrop-blur-md"
             netlify
+            actions="/"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
