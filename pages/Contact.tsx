@@ -5,22 +5,17 @@ const Contact: React.FC = () => {
   const [formType, setFormType] = useState<'buyer' | 'factory'>('buyer');
   const [submitted, setSubmitted] = useState(false);
 
-  // HOW TO GET EMAILS:
-  // 1. Go to https://formspree.io
-  // 2. Create a "New Form" and name it "Egolab Leads"
-  // 3. Paste the provided URL (e.g., https://formspree.io/f/mqkapnwl) below:
-  const FORMSPREE_URL = "https://formspree.io/f/mqkapnwl"; // Example placeholder
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
 
     try {
-      const response = await fetch(FORMSPREE_URL, {
+      // Send to Netlify form endpoint
+      const response = await fetch('/', {
         method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
       });
       
       if (response.ok) {
@@ -68,7 +63,10 @@ const Contact: React.FC = () => {
           <form 
             key={formType}
             onSubmit={handleSubmit} 
+            name="egolab-contact"
+            method="POST"
             className="bg-white/[0.03] border border-white/10 p-8 md:p-10 rounded-3xl backdrop-blur-md"
+            netlify
           >
             {/* Formspree works better if the 'name' attributes are clear */}
             <input type="hidden" name="Inquiry_Type" value={formType === 'buyer' ? 'Data Buyer' : 'Factory Partner'} />
