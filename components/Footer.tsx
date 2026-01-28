@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-24">
         <div className="col-span-1 md:col-span-2">
           <Logo className="mb-10 scale-110 origin-left" />
-          <p className="text-lg text-white/40 max-w-sm leading-tight mb-12 font-medium italic">
+          <p className="text-lg text-white/40 max-w-sm leading-tight mb-12 font-medium">
             "The world's highest density egocentric manufacturing data network."
           </p>
           <div className="flex space-x-4">
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
       
       <div className="max-w-7xl mx-auto mt-16 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-[13px] mono uppercase tracking-[0.5em] opacity-70">
         <div>© 2026 Egolab.ai — All Operational Units Active</div>
-        <div className="mt-4 md:mt-0">Mumbai • London • Seattle</div>
+        <div className="mt-4 md:mt-0">Mumbai • Dubai • London</div>
       </div>
     </footer>
   );

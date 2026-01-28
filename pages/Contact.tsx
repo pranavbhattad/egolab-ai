@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic leading-none mb-4">Request Access.</h2>
+        <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-none mb-4">Request Access.</h2>
         <p className="text-xs text-white/60 uppercase mono tracking-[0.4em]">Choose your track to begin integration</p>
       </div>
 
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
             className={`w-full text-left p-6 rounded-2xl border-2 transition-all ${formType === 'buyer' ? 'border-white bg-white/10' : 'border-white/5 opacity-40 hover:opacity-100'}`}
           >
             <div className="text-[12px] mono uppercase font-black tracking-widest opacity-60 mb-1">AI Research Track</div>
-            <h3 className="text-xl font-black uppercase italic">I need POV Data</h3>
+            <h3 className="text-xl font-black uppercase">I need POV Data</h3>
             <p className="text-[11px] text-white/60 mt-2 font-medium">Get raw 4K egocentric streams for model training.</p>
           </button>
           
@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
             className={`w-full text-left p-6 rounded-2xl border-2 transition-all ${formType === 'factory' ? 'border-white bg-white/10' : 'border-white/5 opacity-40 hover:opacity-100'}`}
           >
             <div className="text-[12px] mono uppercase font-black tracking-widest opacity-60 mb-1">Industrial Track</div>
-            <h3 className="text-xl font-black uppercase italic">I have a Factory</h3>
+            <h3 className="text-xl font-black uppercase">I have a Factory</h3>
             <p className="text-[11px] text-white/60 mt-2 font-medium">Monetize your floor data and audit process safety.</p>
           </button>
         </div>
@@ -67,10 +67,13 @@ const Contact: React.FC = () => {
             method="POST"
             className="bg-white/[0.03] border border-white/10 p-8 md:p-10 rounded-3xl backdrop-blur-md"
             netlify
+            data-netlify="true"
+            netlify-honeypot="bot-field"
           >
             {/* Formspree works better if the 'name' attributes are clear */}
             <input type="hidden" name="Inquiry_Type" value={formType === 'buyer' ? 'Data Buyer' : 'Factory Partner'} />
-            
+            <input type="hidden" name="form-name" value="egolab-contact" />
+            <input type="hidden" name="bot-field" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div className="space-y-1">
                 <label className="text-[11px] mono uppercase font-black text-white/60">Your Name</label>
@@ -122,7 +125,7 @@ const Contact: React.FC = () => {
             </button>
             
             <div className="mt-8 text-center">
-               <span className="text-[11px] mono uppercase tracking-[0.5em] opacity-60">Bharat Nodes: Mumbai • Gurgaon • Bengaluru</span>
+               <span className="text-[11px] mono uppercase tracking-[0.5em] opacity-60">Mumbai • Dubai • London</span>
             </div>
           </form>
         </div>

@@ -12,7 +12,7 @@ const Home: React.FC = () => {
             <span className="text-[9px] mono uppercase tracking-[0.2em] font-bold text-white/60">India's First Egocentric Data Network</span>
           </div>
           
-          <h1 className="text-5xl md:text-[5.5rem] font-[900] tracking-tighter leading-[0.85] mb-6 glow-text italic">
+          <h1 className="text-4xl md:text-[5.5rem] font-[900] tracking-tighter leading-[0.85] mb-6 glow-text">
             Teaching Robots <br/>To Use Hands.
           </h1>
           
