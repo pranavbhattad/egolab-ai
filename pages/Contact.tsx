@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
           >
             <div className="text-[12px] mono uppercase font-black tracking-widest opacity-60 mb-1">AI Research Track</div>
             <h3 className="text-xl font-black uppercase">I need POV Data</h3>
-            <p className="text-[11px] text-white/60 mt-2 font-medium">Get raw 4K egocentric streams for model training.</p>
+            <p className="text-[11px] text-white/60 mt-2 font-medium">Get 1080p IMU egocentric streams for model training.</p>
           </button>
           
           <button 
@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
             </button>
             
             <div className="mt-8 text-center">
-               <span className="text-[11px] mono uppercase tracking-[0.5em] opacity-60">Mumbai • Dubai • London</span>
+               <span className="text-[11px] mono uppercase tracking-[0.5em] opacity-60">Mumbai • Bengaluru • San Francisco</span>
             </div>
           </form>
         </div>

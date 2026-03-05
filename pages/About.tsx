@@ -6,26 +6,26 @@ const About: React.FC = () => {
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-8">
         <div>
-          <span className="text-[12px] mono uppercase opacity-60 tracking-[0.5em] mb-4 block">The Problem</span>
+          <span className="text-[12px] mono uppercase opacity-60 tracking-[0.5em] mb-4 block">The Focus</span>
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8 uppercase leading-tight">
-            CCTV sees the room. <br/><span className="text-white/20">We see the tool.</span>
+            Giving brains to machines. <br/>
           </h2>
           <p className="text-lg text-white/40 leading-relaxed font-medium">
-            Most training data comes from security cameras. These lack the depth, angle, and proximity needed to teach a robot how to solder a PCB, weld a joint, or assemble a motor. 
+            Machines are filled with power but lack intelligence. We are changing that. We are going to teach a robot how to solder a PCB, weld a joint, assemble a motor or possibly anything on their own. 
           </p>
         </div>
         
         <div className="space-y-6">
-            <Feature num="01" title="First-Person POV" body="Captured from lightweight head-mounted wearables worn by master industrial workers." />
-            <Feature num="02" title="Dexterity Labels" body="Every hand movement, grasp type, and tool engagement is annotated by our AI pipeline." />
-            <Feature num="03" title="Bharat Scale" body="Sourced from thousands of factory shifts across India's largest manufacturing hubs." />
+            <Feature num="01" title="Data Collection Phase" body="We deploy our devices for just 1 day to capture the training data. This phase gives you productivity insights." />
+            <Feature num="02" title="The Robot Pilot" body="We identify the single most economically useful task to automate." />
+            <Feature num="03" title="Mass Deployment" body="We move from pilot to production, training models for every automatable task. This enables 24/7 production and eliminates downtime from a lack of workers." />
         </div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 border border-white/20 rounded-2xl bg-white/[0.02]">
-        <Stat label="Total Frames" val="120M+" />
-        <Stat label="Factory Partners" val="48+" />
-        <Stat label="Redaction Speed" val="<40ms" />
+        <Stat label="Total Frames" val="10.8B+" />
+        <Stat label="Factory Partners" val="300+" />
+        <Stat label="Total Workers" val="1L+" />
         <Stat label="Legal Compliance" val="100%" />
       </div>
     </div>

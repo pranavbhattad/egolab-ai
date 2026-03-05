@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Logo from './Logo';
+import { url } from 'inspector';
 
 const Navbar: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -22,17 +23,18 @@ const Navbar: React.FC = () => {
 
         <div className="hidden md:flex items-center space-x-10">
           {[
-            { label: 'Intelligence', id: 'hero' },
-            { label: 'How it works', id: 'how-it-works' },
-            { label: 'Get Access', id: 'access' },
+            { label: 'Varun', url: 'https://www.linkedin.com/in/varun--pareek/' },
+            { label: 'Raghav', url: 'https://www.linkedin.com/in/raghav-samani/' },
+            { label: 'Pranav', url: 'https://www.linkedin.com/in/pranavbhattad/' },
           ].map((item) => (
-            <button
-              key={item.id}
+            <a
+              key={item.url}
+              href={item.url}
               onClick={() => scrollTo(item.id)}
               className="text-[12px] uppercase tracking-[0.4em] font-bold opacity-70 hover:opacity-100 transition-all hover:text-white"
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </div>
 
@@ -40,7 +42,7 @@ const Navbar: React.FC = () => {
           onClick={() => scrollTo('access')}
           className="bg-white text-black px-4 py-1.5 text-[12px] font-black uppercase tracking-[0.2em] hover:scale-105 transition-all rounded-full"
         >
-          Access Data
+          Get Intelligent
         </button>
       </div>
     </nav>

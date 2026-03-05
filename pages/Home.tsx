@@ -9,11 +9,11 @@ const Home: React.FC = () => {
         <div className="max-w-xl">
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-6">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-            <span className="text-[9px] mono uppercase tracking-[0.2em] font-bold text-white/60">India's First Egocentric Data Network</span>
+            <span className="text-[9px] mono uppercase tracking-[0.2em] font-bold text-white/60">India's Largest Egocentric Data Network</span>
           </div>
           
           <h1 className="text-4xl md:text-[5.5rem] font-[900] tracking-tighter leading-[0.85] mb-6 glow-text">
-            Teaching Robots <br/>To Use Hands.
+            Making Factories <br/>Intelligent.
           </h1>
           
           <p className="text-lg md:text-xl text-white/50 leading-tight mb-8 font-medium">
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-white/80 group-hover:scale-105 transition-transform duration-500"></div>
             </button>
             <div className="text-[12px] mono uppercase tracking-widest opacity-60 leading-relaxed border-l border-white/10 pl-4">
-              4K Raw Video • 60 FPS • <br/>AI Motion Annotated
+              1080p IMU Video • 30 FPS • <br/>AI Motion Annotated
             </div>
           </div>
         </div>
